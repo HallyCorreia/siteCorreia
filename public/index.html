@@ -48,7 +48,9 @@
 
     <!-- Profile -->
     <div class="profile">
-      <div class="avatar" aria-hidden="true">C</div>
+      <div class="avatar">
+        <img src="correia-avatar.jpg" alt="Correia do Nordeste" width="88" height="88" />
+      </div>
       <div class="profile-name">
         <h1>Correia</h1>
         <span class="verified-badge" aria-label="Criador de conteúdo verificado">
@@ -59,17 +61,54 @@
       <p class="bio">Migrar também é resistir. Dicas, histórias e conversas reais para quem carrega a raiz no coração.</p>
     </div>
 
-    <!-- Video -->
-    <div class="video-wrapper" aria-label="Vídeo em destaque do Correia">
-      <iframe
-        src="https://www.youtube.com/embed/k9bi17lHZRc?autoplay=1&mute=1"
-        title="Vídeo do Correia do Nordeste"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        loading="lazy"
-      ></iframe>
-    </div>
+    <!-- Video Carousel -->
+    <!-- Para adicionar vídeos: copie um bloco .carousel-slide e altere data-vid e o alt da imagem -->
+    <section class="carousel" aria-label="Vídeos em destaque">
+      <div class="carousel-viewport" id="carousel-viewport">
+        <div class="carousel-track" id="carousel-track">
+
+          <div class="carousel-slide active" data-vid="k9bi17lHZRc">
+            <div class="slide-media">
+              <img class="slide-thumb" src="https://img.youtube.com/vi/k9bi17lHZRc/mqdefault.jpg" alt="Expedição Serra Rio do Rastro" loading="lazy" />
+              <button class="slide-play" aria-label="Assistir: Expedição Serra Rio do Rastro">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+            <p class="slide-title">Expedição Serra Rio do Rastro</p>
+          </div>
+
+          <div class="carousel-slide" data-vid="bKraPt0h0Bc">
+            <div class="slide-media">
+              <img class="slide-thumb" src="https://img.youtube.com/vi/bKraPt0h0Bc/mqdefault.jpg" alt="Vídeo do Correia do Nordeste" loading="lazy" />
+              <button class="slide-play" aria-label="Assistir vídeo do Correia">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+            <p class="slide-title">Correia do Nordeste</p>
+          </div>
+
+          <div class="carousel-slide" data-vid="c0TVElr9vG4">
+            <div class="slide-media">
+              <img class="slide-thumb" src="https://img.youtube.com/vi/c0TVElr9vG4/mqdefault.jpg" alt="Vídeo do Correia do Nordeste" loading="lazy" />
+              <button class="slide-play" aria-label="Assistir vídeo do Correia">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+            </div>
+            <p class="slide-title">Correia do Nordeste</p>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Vídeo anterior">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </button>
+      <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Próximo vídeo">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </button>
+
+      <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Navegar entre vídeos"></div>
+    </section>
 
     <!-- Social Links -->
     <nav class="social-links" aria-label="Redes sociais do Correia">
@@ -88,12 +127,7 @@
         YouTube
       </a>
 
-      <button class="btn-social btn-kwai" disabled aria-label="Kwai em breve" title="Em breve no Kwai">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
-        Kwai <span class="badge-soon">Em breve</span>
-      </button>
-
-      <button class="btn-social btn-sobre" id="btn-sobre" aria-expanded="false" aria-controls="sobre-panel">
+<button class="btn-social btn-sobre" id="btn-sobre" aria-expanded="false" aria-controls="sobre-panel">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
         Sobre
       </button>
@@ -121,7 +155,9 @@
       <button id="close-sobre" class="close-btn" aria-label="Fechar">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
       </button>
-      <div class="sobre-avatar" aria-hidden="true">C</div>
+      <div class="sobre-avatar">
+        <img src="correia-avatar.jpg" alt="Correia do Nordeste" />
+      </div>
       <h2>Sobre o Correia</h2>
       <div class="sobre-content">
         <p>Meu nome é Correia, nasci e cresci no coração do Nordeste, onde o sol é quente, o sotaque é forte e o povo é resistente. Sempre tive o sonho de conhecer o Sul do Brasil, mas não apenas como turista: queria viver a experiência de quem chega para recomeçar a vida, longe de casa.</p>
@@ -216,6 +252,110 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+
+      /* ── Carousel de vídeos ── */
+      (function () {
+        var viewport  = document.getElementById('carousel-viewport');
+        var track     = document.getElementById('carousel-track');
+        var dotsEl    = document.getElementById('carousel-dots');
+        var prevBtn   = document.getElementById('carousel-prev');
+        var nextBtn   = document.getElementById('carousel-next');
+        var slides    = Array.from(track.querySelectorAll('.carousel-slide'));
+        var total     = slides.length;
+        var current   = 0;
+
+        /* Cria os dots */
+        slides.forEach(function (_, i) {
+          var dot = document.createElement('button');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-label', 'Vídeo ' + (i + 1));
+          dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+          dot.addEventListener('click', function () { goTo(i); });
+          dotsEl.appendChild(dot);
+        });
+
+        function getOffset(index) {
+          var slideW   = slides[0].offsetWidth + 12; /* 12 = gap */
+          var vpW      = viewport.offsetWidth;
+          return (vpW - slideW) / 2 - slideW * index;
+        }
+
+        function goTo(index) {
+          slides[current].classList.remove('active');
+          dotsEl.children[current].classList.remove('active');
+          dotsEl.children[current].setAttribute('aria-selected', 'false');
+
+          current = Math.max(0, Math.min(index, total - 1));
+
+          slides[current].classList.add('active');
+          dotsEl.children[current].classList.add('active');
+          dotsEl.children[current].setAttribute('aria-selected', 'true');
+
+          track.style.transform = 'translateX(' + getOffset(current) + 'px)';
+
+          prevBtn.disabled = current === 0;
+          nextBtn.disabled = current === total - 1;
+        }
+
+        prevBtn.addEventListener('click', function () { goTo(current - 1); });
+        nextBtn.addEventListener('click', function () { goTo(current + 1); });
+
+        /* Swipe touch */
+        var touchStartX = 0;
+        viewport.addEventListener('touchstart', function (e) {
+          touchStartX = e.touches[0].clientX;
+        }, { passive: true });
+        viewport.addEventListener('touchend', function (e) {
+          var diff = touchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 40) {
+            goTo(diff > 0 ? current + 1 : current - 1);
+          }
+        }, { passive: true });
+
+        /* Swipe mouse (desktop drag) */
+        var mouseStartX = 0;
+        var dragging = false;
+        viewport.addEventListener('mousedown', function (e) {
+          mouseStartX = e.clientX;
+          dragging = true;
+        });
+        viewport.addEventListener('mouseup', function (e) {
+          if (!dragging) return;
+          dragging = false;
+          var diff = mouseStartX - e.clientX;
+          if (Math.abs(diff) > 40) {
+            goTo(diff > 0 ? current + 1 : current - 1);
+          }
+        });
+
+        /* Lazy iframe ao clicar em play */
+        track.addEventListener('click', function (e) {
+          var playBtn = e.target.closest('.slide-play');
+          if (!playBtn) return;
+          var slide = playBtn.closest('.carousel-slide');
+          if (!slide.classList.contains('active')) {
+            var idx = slides.indexOf(slide);
+            goTo(idx);
+            return;
+          }
+          var vid   = slide.dataset.vid;
+          var media = slide.querySelector('.slide-media');
+          media.innerHTML = '<iframe src="https://www.youtube.com/embed/' + vid + '?autoplay=1" title="Vídeo do Correia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        });
+
+        /* Redimensionar recalcula posição */
+        window.addEventListener('resize', function () { goTo(current); });
+
+        /* Init após render — aguarda imagens carregarem */
+        function init() { goTo(0); }
+        if (document.readyState === 'complete') {
+          init();
+        } else {
+          window.addEventListener('load', init);
+          setTimeout(init, 300); /* fallback */
+        }
+      })();
 
       /* ── Modal utilitário ── */
       function makeModal(openBtnId, panelId, closeBtnId) {
