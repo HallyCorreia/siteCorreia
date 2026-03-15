@@ -36,6 +36,10 @@
   }
   </script>
 
+  <!-- Preload recursos críticos acima do fold -->
+  <link rel="preload" as="image" href="CorreiadoNordeste.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="correia-avatar.jpg" fetchpriority="high" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -49,7 +53,7 @@
     <!-- Profile -->
     <div class="profile">
       <div class="avatar">
-        <img src="correia-avatar.jpg" alt="Correia do Nordeste" width="88" height="88" />
+        <img src="correia-avatar.jpg" alt="Correia do Nordeste" width="88" height="88" fetchpriority="high" />
       </div>
       <div class="profile-name">
         <h1>Correia</h1>
