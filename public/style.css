@@ -129,7 +129,7 @@ h1 {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: var(--gradient);
+  background: #1d9bf0;
   flex-shrink: 0;
 }
 
@@ -384,25 +384,74 @@ h1 {
 
 /* Sobre button */
 .btn-sobre {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(4px);
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: fit-content;
+  min-width: 138px;
+  background: var(--gradient);
+  box-shadow: var(--shadow-btn);
 }
 
 .btn-sobre:hover {
-  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.45);
+}
+
+/* Apoio button (inside sponsor CTA) */
+.btn-apoio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: var(--radius-btn);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.82em;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #e91e63, #c2185b);
+  box-shadow: 0 4px 14px rgba(233, 30, 99, 0.35);
+  transition: transform var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
+}
+
+.btn-apoio svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.btn-apoio:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 22px rgba(233, 30, 99, 0.5);
+}
+
+.btn-apoio:active {
+  transform: translateY(0) scale(1.01);
 }
 
 /* ===== Sponsor CTA ===== */
 .sponsor-cta {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 14px;
   background: rgba(242, 100, 25, 0.1);
   border: 1px solid rgba(242, 100, 25, 0.28);
   border-radius: 14px;
   padding: 18px 20px;
+}
+
+.sponsor-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sponsor-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
 .sponsor-icon {
@@ -425,6 +474,7 @@ h1 {
 .sponsor-text {
   flex: 1;
   min-width: 0;
+  padding-right: 4px;
 }
 
 .sponsor-text strong {
